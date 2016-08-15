@@ -1,0 +1,237 @@
+video {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.video_body * {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline: none;
+}
+
+
+/**播放器主体**/
+
+.video_body {
+    overflow: hidden;
+    position: relative;
+    background: #000;
+    padding: 0!important;
+    font: 12px tahoma, arial;
+}
+
+/**视频poster图片**/
+.video_poster {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/**底部控制栏**/
+
+.video_controls {
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 3;
+}
+
+
+/**控制栏内容**/
+
+.video_controls_l {
+    float: left;
+    width: 850px;
+}
+
+.video_controls i {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: url(./images/biz-player.png) no-repeat;
+}
+
+.video_controls i:hover {
+    cursor: pointer;
+}
+
+.video_controls i.play_icon {
+    background-position: 13px 7px;
+}
+
+.video_controls i.pause_icon {
+    background-position: 13px -20px;
+}
+
+.video_controls i.volume_icon {
+    background-position: 8px -73px;
+}
+
+.video_controls i.mute_icon {
+    background-position: 8px -46px;
+}
+
+.video_controls i.fullscreen {
+    background-position: 8px -100px;
+}
+
+.v_play {
+    float: left;
+}
+
+.v_play i.play {
+    padding: 0 5px;
+}
+
+.v_play i.play:hover {
+    background-color: rgba(0, 0, 0, .4);
+    -webkit-transition: color 0.3s ease-out 0s;
+    -moz-transition: color 0.3s ease-out 0s;
+    -ms-transition: color 0.3s ease-out 0s;
+    -o-transition: color 0.3s ease-out 0s;
+    transition: color 0.3s ease-out 0s;
+}
+
+.v_play label {
+    float: left;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 30px;
+    color: #fff;
+    margin: 0px 10px;
+    cursor: default;
+}
+
+.v_play label em {
+    font-style: normal;
+    color: #fff !important;
+}
+
+.v_items {
+    float: right;
+}
+
+.v_volume {
+    width: 50px;
+    position: relative;
+    height: 2px;
+    float: left;
+    margin: 14px 5px;
+}
+
+
+/**使用<progress>和<range>标签来模拟播放进度**/
+.video_range {
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    z-index: 4;
+}
+
+.v_range {
+    width: 100%;
+    -webkit-appearance: none !important;
+    height: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 1px;
+    border: none;
+}
+
+.v_range::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    height: 10px;
+    width: 10px;
+    background: none repeat scroll 0 0 #f63e14;
+    border-radius: 50%;
+}
+
+.v_progress {
+    width: 100%;
+    height: 2px;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    opacity: 0.5;
+    color: #f63e14; /* IE */
+}
+
+.v_progress:hover {
+    opacity: 0.9;
+}
+
+.v_progress::-moz-progress-bar {
+    background-color: #f63e14;
+}
+
+.v_progress::-webkit-progress-bar {
+    background-color: #fff;
+}
+
+.v_progress::-webkit-progress-value {
+    background-color: #f63e14;
+}
+
+.volume_range {
+	-webkit-appearance: none !important;
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    background-color: #fff;
+    outline: none;
+}
+
+.volume_range::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	height: 8px;
+    width: 8px;
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 50%;
+}
+
+.volume_range::-moz-range-thumb {
+	height: 8px;
+    width: 8px;
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 50%;
+}
+
+.volume_range::-ms-thumb {
+	height: 8px;
+    width: 8px;
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 50%;
+}
+
+
+/**播放按钮**/
+
+.v_bigplaybtn {
+    background: url('http://img03.sogoucdn.com/app/a/4001/52a3bb7f-ae8c-47c6-8140-889c8b473bc8.png');
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 -50px;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.v_bigplaybtn:hover {
+    opacity: .6;
+    -webkit-transition: opacity 0.5s ease-out 0s;
+    -moz-transition: opacity 0.5s ease-out 0s;
+    -ms-transition: opacity 0.5s ease-out 0s;
+    -o-transition: opacity 0.5s ease-out 0s;
+    transition: opacity 0.5s ease-out 0s;
+}

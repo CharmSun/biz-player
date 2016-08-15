@@ -1,0 +1,26 @@
+{
+  "name": "biz-player",
+  "version": "1.0.0",
+  "description": "The Sogou Biz apartment video player which supports H5 and flash",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "video",
+    "html5",
+    "flash"
+  ],
+  "author": "suncan",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "hogan.js": "^3.0.2",
+    "mustache-loader": "^0.3.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  }
+}
