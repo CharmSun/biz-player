@@ -1,5 +1,5 @@
 {
-  "name": "biz-player",
+  "name": "@bizfe/biz-player",
   "version": "1.0.0",
   "description": "The Sogou Biz apartment video player which supports H5 and flash",
   "main": "index.js",
