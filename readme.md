@@ -41,6 +41,7 @@
 		clickVideoUrl: "http://www.sogou.com",
 		clickVideoFunc: "jsFunc"
 	});
+*需要注意这里的clickVideoFunc传入的是要调用的方法名，是字符串。*
 
 使用Html5播放器：
 

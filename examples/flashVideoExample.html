@@ -10,6 +10,7 @@
 <div id="biz-player"></div>
 </body>
 <script type="text/javascript" charset="UTF-8">
+//浏览器打开本地文件时，执行jsFunc会无效，与安全沙箱有关
 function jsFunc() {
 	alert("Hello，I'm BizPlayer!");
 }
@@ -17,7 +18,7 @@ var player = new BizPlayer('biz-player');
 
 player.createFlashVideo({
 	autoPlay: false,
-	useFullScreen: false,
+	useFullScreen: true,
 	width:514,
     height:314,
     swfUrl: "../dist/BizPlayer.swf",
