@@ -42,6 +42,7 @@ var BizPlayerHtml5 = function(options){
         var poster = this.el.getElementsByClassName("video_poster")[0];
         var video_range = this.el.getElementsByClassName("video_range")[0].getElementsByClassName("v_range")[0];
         var video_progress = this.el.getElementsByClassName("video_range")[0].getElementsByClassName("v_progress")[0];
+        var down_progress = this.el.getElementsByClassName("video_range")[0].getElementsByClassName("down_progress")[0];
         var playBtn = this.el.getElementsByClassName("play")[0];
         var pauseBtn = this.el.getElementsByClassName("play")[1];
         var bigPlaybtn = this.el.getElementsByClassName("v_bigplaybtn")[0];
@@ -52,6 +53,7 @@ var BizPlayerHtml5 = function(options){
             var _t1 = me.video.duration;
             var _t2 = Math.floor(_t1/60)+":"+Math.floor(_t1-Math.floor(_t1/60)*60);
             me.el.getElementsByTagName('em')[1].innerHTML = _t2;
+            down_progress.setAttribute("max", Math.floor(_t1));
             video_progress.setAttribute("max", Math.floor(_t1));
             video_range.setAttribute("max", Math.floor(_t1));
         });
@@ -62,6 +64,12 @@ var BizPlayerHtml5 = function(options){
             me.el.getElementsByTagName('em')[0].innerHTML = _t2;
             video_progress.value = Math.floor(_t1);
             video_range.value =  Math.floor(_t1);
+        });
+
+        this.video.addEventListener('progress',function(){
+            if(me.video.buffered.length > 0){
+                down_progress.value = me.video.buffered.end(0);
+            }
         });
 
         this.video.addEventListener('playing',function(){

@@ -1,4 +1,4 @@
-require('./dep/swfobject');
+var swfobject = require('./dep/swfobject');
 var BizPlayerHtml5 = require('./BizPlayerHtml5');
 
 
@@ -36,6 +36,7 @@ BizPlayer.prototype = {
 	 * @param {height} [options.height] 视频播放器高度
 	 * @param {String} [options.src] 视频资源URL
 	 * @param {String} [options.poster] 视频不播放时的封面图片URL
+	 * @param {String} [options.swfUrl] BizPlayer.swf文件URL
 	 * @param {String} [options.clickVideoUrl] 点击视频区域的跳转链接
 	 * @param {String} [options.clickVideoFunc] 点击flash视频要执行的Func的方法名
 	 */
@@ -64,7 +65,7 @@ BizPlayer.prototype = {
         this.el.innerHTML = '<div id="' + attributes.id + '"></div>';
          
         swfobject.embedSWF(
-            "BizPlayer.swf", 
+            options.swfUrl, 
             attributes.id,
             options.width, 
             options.height,

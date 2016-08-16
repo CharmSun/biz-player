@@ -23,6 +23,7 @@
 		</ul>
 	</div>
 	<div class="video_range">
+		<progress  max="0" value="0" class="down_progress"></progress>
 		<progress  max="0" value="0" class="v_progress"></progress>
 		<input type="range" class="v_range" value="0" min="0" max="0">
 	</div>

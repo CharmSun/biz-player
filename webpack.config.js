@@ -1,5 +1,5 @@
 /**
- * 打包源代码至dist目录，没有带hash，前后端联调时，便于频繁修改代码后打包，上传至svn
+ * build config
  */
 var path = require('path'),
     webpack = require('webpack'),

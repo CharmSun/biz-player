@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../dist/biz-player.css">
+</head>
+<body>
+<script src="../dist/biz-player.js"></script>	
+<div id="biz-player"></div>
+</body>
+<script type="text/javascript" charset="UTF-8">
+var player = new BizPlayer('biz-player');
+player.createH5Video({
+	autoPlay: false,
+	useFullScreen: false,
+	width:514,
+    height:314,
+	src: "http://biz.sogoucdn.com/pz/test.mp4",
+	poster: "http://biz.sogoucdn.com/pz/bg514x314.jpg",
+	clickVideoUrl: "http://www.sogou.com",
+	clickVideoFunc: function() {
+		alert("Hello，I'm BizPlayer!");
+	}
+});
+</script>
+</html>

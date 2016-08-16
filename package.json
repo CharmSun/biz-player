@@ -4,7 +4,7 @@
   "description": "The Sogou Biz apartment video player which supports H5 and flash",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --devtool"
   },
   "keywords": [
     "video",
